@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>modify</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="vetementForm" (ngSubmit)="update()">
+    <ion-item>
+      <ion-label position="floating">Name</ion-label>
+      <ion-input formControlName="name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Price</ion-label>
+      <ion-input formControlName="price"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Size</ion-label>
+      <ion-input formControlName="size"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Link</ion-label>
+      <ion-input formControlName="link"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Color</ion-label>
+      <ion-input formControlName="color"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Category</ion-label>
+      <ion-select formControlName="category">
+        <ion-select-option value="homme"> <span class="dark-select">Homme</span> </ion-select-option>
+        <ion-select-option value="femme"> <span class="dark-select">Femme</span> </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button type="submit">Update</ion-button>
+
+  </form>
+</ion-content>

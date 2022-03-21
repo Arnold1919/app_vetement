@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+
+
+    <ion-title>vetement</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button (click)="goToForm()">Ajouter</ion-button>
+  <ion-label>le nombre d'article {{vetements.length}}</ion-label>
+  <ion-list>
+    <ion-item *ngFor="let vetement of vetements"  >
+
+
+
+      <ion-avatar (click)="goTo(vetement.id)">
+        <ion-img  [src]="vetement.link"></ion-img>
+      </ion-avatar>
+      <ion-label >{{vetement.name}}</ion-label>
+      <div *ngIf="vetement.price <= 10">En SOLDE</div>
+       <ion-button size="small" (click)="presentAlertConfirm(vetement.id)"  >Supprimer</ion-button>
+      <ion-button size="small" (click)="goToMod(vetement.id)">Modifier</ion-button>
+
+
+    </ion-item>
+  </ion-list>
+</ion-content>

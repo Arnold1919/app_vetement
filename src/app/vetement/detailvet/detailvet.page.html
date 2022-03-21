@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+
+      <ion-back-button slot="start">
+
+      </ion-back-button>
+
+    </ion-buttons>
+    <ion-title>detailvet</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+<!-- <ion-title>ca marche</ion-title> -->
+
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-title>Name:  {{vetement?.name}}</ion-title>
+      <ion-title>Price: {{vetement?.price}}</ion-title>
+      <ion-title>Size:  {{vetement?.size}}</ion-title>
+      <ion-title>Status:{{vetement?.moreInfo?.status}}</ion-title>
+      <ion-title>Color: {{vetement?.moreInfo?.color}}</ion-title>
+      <ion-title>Category: {{vetement?.moreInfo?.category}}</ion-title>
+      <ion-img [src]="vetement?.link"></ion-img>
+
+
+
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+</ion-content>
